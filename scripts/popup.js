@@ -20,14 +20,20 @@ document.getElementById('checkUrl').addEventListener('click', async () => {
       }
     }
     if (isNewsWebsite) {
-      if (leftLevel > 0) {
-        alert("This is a right-wing news website");
-      }
-      else if (leftLevel < 0) {
+      if (leftLevel < -3.00) {
         alert("This is a left-wing news website");
       }
+      else if (leftLevel < -1.00) {
+        alert("This is a center-left news website");
+      }
+      else if (leftLevel < 1) {
+        alert("This is a center news website");
+      }
+      else if (leftLevel < 3.00) {
+        alert("This is a center-right news website");
+      }
       else {
-        alert("This is a neutral news website");
+        alert("This is a right-wing news website");
       }
     }
     else {
