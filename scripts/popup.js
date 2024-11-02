@@ -20,7 +20,15 @@ document.getElementById('checkUrl').addEventListener('click', async () => {
       }
     }
     if (isNewsWebsite) {
-      alert(leftLevel);
+      if (leftLevel > 0) {
+        alert("This is a right-wing news website");
+      }
+      else if (leftLevel < 0) {
+        alert("This is a left-wing news website");
+      }
+      else {
+        alert("This is a neutral news website");
+      }
     }
     else {
       alert("This is not in our news websites database");
