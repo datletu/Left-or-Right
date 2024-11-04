@@ -1,11 +1,16 @@
 {
   "manifest_version": 3,
-  "name": "Tab Manager for Chrome Dev Docs",
+  "name": "Reading time",
   "version": "1.0",
-  "action": {
-    "default_popup": "popup.html"
-  },
-  "host_permissions": ["https://developer.chrome.com/*"],
-  "permissions": ["tabs"]
+  "description": "Add the reading time to Chrome Extension documentation articles",
+  "content_scripts": [
+    {
+      "js": ["scripts/content.js"],
+      "matches": [
+        "https://developer.chrome.com/docs/extensions/*",
+        "https://developer.chrome.com/docs/webstore/*",
+        "https://*/*"
+      ]
+    }
+  ]
 }
-  
